@@ -1,0 +1,8 @@
+{% extends 'Aplicaciones/index.html' %} {% block alumnos_lista %}
+<h2 style="text-align: center; color: blue">Alumnado</h2>
+{% for alumnos in datos2 %}
+<p>Codigo del alumno: {{alumnos.codigo}}</p>
+<p>Nombre del Alumno: {{alumnos.nombre}}</p>
+<p>Creditos totales: {{alumnos.creditos}}</p>
+<p>-------------------------------------------------------</p>
+{% endfor %} {% endblock alumnos_lista %}

@@ -1,0 +1,8 @@
+{% extends 'Aplicaciones/index.html' %} {% block cursos_lista %}
+<h2 style="text-align: center; color: blue">Cursos</h2>
+{% for curso in datos %}
+<p>Codigo del curso: {{curso.codigo}}</p>
+<p>Nombre del curso: {{curso.nombre}}</p>
+<p>Creditos: {{curso.creditos}}</p>
+<p>-------------------------------------------------------</p>
+{% endfor %} {% endblock cursos_lista %}

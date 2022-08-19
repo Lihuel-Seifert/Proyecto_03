@@ -1,0 +1,15 @@
+{% extends 'Aplicaciones/index.html' %}
+{% block crear_cursos %}
+
+    <form method="post">{% csrf_token %}
+        <p>Numero de codigo</p>
+        <input type="text" name="codigo">
+        <p>Ingrese el nombre del curso</p>
+        <input type="text" name="nombre">
+        <p>Ingrese los creditos</p>
+        <input type="number" name="creditos">
+
+        <input type="submit" value="Crear">
+    </form>
+
+{% endblock crear_cursos %}

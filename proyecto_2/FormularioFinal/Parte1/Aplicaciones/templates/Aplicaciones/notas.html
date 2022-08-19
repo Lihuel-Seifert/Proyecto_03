@@ -1,0 +1,8 @@
+{% extends 'Aplicaciones/index.html' %} {% block notas_lista %}
+<h2 style="text-align: center; color: blue">Materias</h2>
+{% for notas in datos1 %}
+<p>Codigo de Notas: {{notas.codigo}}</p>
+<p>Nombre de la Materia: {{notas.nombre}}</p>
+<p>Creditos de las Notas: {{notas.creditos}}</p>
+<p>-------------------------------------------------------</p>
+{% endfor %} {% endblock notas_lista %}

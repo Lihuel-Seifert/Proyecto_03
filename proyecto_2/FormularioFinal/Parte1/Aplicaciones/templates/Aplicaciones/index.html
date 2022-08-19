@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Datos</title>
+        <!-- Favicon-->
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static 'Aplicaciones/assets/favicon.ico' %}" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'Aplicaciones/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">Blog de datos</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'cursos' %}">Cursos</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'notas' %}">Notas</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'alumnos' %}">alumnos</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'formulario_cursos' %}">Formulario Cursos</a>
+                </div>
+                
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Menu</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <form class="d-flex" role="search">
+                            {{ formulario.as_p }}
+                            <button class="btn btn-outline-warning" type="submit" style="height: 30px;">Buscar</button>
+                        </form>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+
+                    {% block crear_cursos %}
+                    {% endblock crear_cursos %}
+   
+
+                    {% block cursos_lista %}
+                    {% endblock cursos_lista %}
+                    
+                    {% block notas_lista %}
+                    {% endblock notas_lista %}
+
+                    {% block alumnos_lista %}
+                    {% endblock alumnos_lista %}
+   
+   
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'Aplicaciones/js/scripts.js' %}"></script>
+    </body>
+</html>
